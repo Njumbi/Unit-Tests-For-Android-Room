@@ -6,7 +6,9 @@ import android.os.Bundle
 import com.example.words.R
 import com.example.words.databinding.ActivityAddNameBinding
 import com.example.words.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
