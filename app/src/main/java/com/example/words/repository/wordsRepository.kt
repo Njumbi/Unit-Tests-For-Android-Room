@@ -15,7 +15,7 @@ class wordsRepository @Inject constructor(val wordsDao: WordsDao){
     }
 
     suspend fun deleteWord(){
-        wordsDao.nuke()
+        wordsDao.delete()
     }
 
 

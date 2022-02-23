@@ -17,7 +17,7 @@ interface WordsDao {
     suspend fun getOneWord(wordId: Int): Word
 
     @Query("DELETE FROM word")
-    suspend fun nuke()
+    suspend fun delete()
 
     @Insert
     suspend fun insertWord(word: Word)
