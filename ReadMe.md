@@ -1,6 +1,7 @@
 # Unit Testing In Android Room
 This is a basic application that will help a developer to learn about unit testing in android room.
-Its a basic application that displays names of people in a school class.
+
+It utilizes room to store and get data of people's name in a class room.
 
 # Table Of Contents
 
