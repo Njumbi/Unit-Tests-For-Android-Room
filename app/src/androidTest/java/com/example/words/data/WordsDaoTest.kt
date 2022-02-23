@@ -26,9 +26,6 @@ class WordsDaoTest {
     private lateinit var database: AppDatabase
     private lateinit var wordsDao: WordsDao
 
-//    @get:Rule
-//    var instantTaskExecutorRule = InstantTaskExecutorRule()
-
     @Before
     fun setupDatabase() {
         database = Room.inMemoryDatabaseBuilder(
@@ -83,14 +80,14 @@ class WordsDaoTest {
 
 
     @Test
-    fun nuke_returnsTrue() = runBlocking {
+    fun delete_returnsTrue() = runBlocking {
         val name = Word(id = 1, "Mary")
-        val name1 = Word(id = 2, "John")
+        val secondName = Word(id = 2, "John")
 
         wordsDao.insertWord(name)
-        wordsDao.insertWord(name1)
+        wordsDao.insertWord(secondName)
 
-        wordsDao.nuke()
+        wordsDao.delete()
 
         val latch = CountDownLatch(1)
         val job = async(Dispatchers.IO) {
